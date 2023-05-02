@@ -1,35 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import logo from "./assets/logo.svg"
+import './global.css'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export function App() {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+    <div className="container">
+      <header className="header">
+        <img src={ logo } alt="Workflow" />
+        <span>Please enter your login information</span>
+      </header>
+      
+      <form>
+        <div className="inputContainer">
+          <label htmlFor="email">E-mail</label>
+          <input
+            type="text"
+            name="email"
+            id="email"
+            placeholder="johndoe@gmail.com"
+          />
+        </div>
+
+        <div className="inputContainer">
+          <label htmlFor="password">Password</label>
+          <input
+            type="text"
+            name="password"
+            id="password"
+            placeholder="***************"
+          />
+        </div>
+
+        <a href="">Forgot your password ?</a>
+        <button className="button">
+       To log in <img src="" alt="" />
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+        <div className="footer">
+          <p>You do not have an account?</p>
+          <a href="#">Create an account</a>
+        </div>
+      </form>
+    </div>
+  );
 }
 
-export default App
+
