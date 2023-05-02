@@ -1,4 +1,5 @@
 import logo from "./assets/logo.svg"
+import arrow from "./assets/arrow.svg"
 import './global.css'
 
 export function App() {
@@ -32,7 +33,7 @@ export function App() {
 
         <a href="">Forgot your password ?</a>
         <button className="button">
-       To log in <img src="" alt="" />
+       To log in <img src={arrow} alt="" />
         </button>
         <div className="footer">
           <p>You do not have an account?</p>
